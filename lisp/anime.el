@@ -8,6 +8,19 @@
 		)
 	)
 
+(use-package zone
+	:ensure nil ; already installed by default
+	:config
+	(defun zone-choose (pgm)
+    "Choose a PGM to run for `zone'."
+    (interactive
+     (list
+      (completing-read
+       "Program: "
+       (mapcar 'symbol-name zone-programs))))
+    (let ((zone-programs (list (intern pgm))))
+      (zone)))
+	)
 
 (use-package fireplace
 	:config
