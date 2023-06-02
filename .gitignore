@@ -1,0 +1,11 @@
+*
+!.gitignore
+!custom-file.el
+!init.el
+!test-util.el
+!lisp/
+!lisp/**/*
+!layouts/
+!layouts/**/*
+!snippets/
+!snippets/**/*
