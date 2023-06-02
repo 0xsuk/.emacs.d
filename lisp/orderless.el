@@ -2,7 +2,9 @@
 (use-package orderless
 	:config
 	(setq 
+	 ;; The completion-styles variable is a list of methods to use when trying to find a match for a completion request
 	 completion-styles '(orderless)
 	 completion-category-defaults nil ; important
-	 completion-category-overrides '((file (styles basic partial-completion)))
-	 orderless-matching-styles '(orderless-initialism orderless-literal)))
+	 orderless-matching-styles '(orderless-prefixes orderless-initialism)
+	 )
+	 )

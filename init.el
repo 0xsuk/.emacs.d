@@ -42,7 +42,7 @@
 (my-load-file "lsp.el")
 (my-load-file "magit.el")
 (my-load-file "vertico.el")
-;; (my-load-file "orderless.el") ; too much.
+(my-load-file "orderless.el")
 (my-load-file "marginalia.el")
 (my-load-file "consult.el")
 (my-load-file "embark.el")
@@ -50,7 +50,7 @@
 (my-load-file "corfu.el")
 (my-load-file "prescient.el")
 (my-load-file "meow.el")
-;(my-load-file "pdf.el")
+(my-load-file "pdf.el")
 ;(my-load-file "org.el")
 ;; (my-load-file "tabline.el")
 (my-load-file "vterm.el")
