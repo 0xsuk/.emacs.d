@@ -23,10 +23,9 @@
 	(setq inferior-lisp-program "sbcl")
 	:custom
 	(sly-kill-without-query-p t)
+	; TODO: what's this. does this conflict with orderless/prescient?
 	(sly-complete-symbol-function 'sly-simple-completions)
 	:config
-	(general-def sly-db-mode-map
-		"C-c C-c" 'sly-db-abort)
 	(general-def sly-mode-map
 		;; "C-x C-e" nil ; sly eavl last exp
 		"M-," nil ;'sly-pop-find-definition-stack
@@ -36,10 +35,8 @@
 		"M-_" nil ;'sly-edit-uses
 		)
 	; TODO configure completion-at-point-functions??
-	(defun my-sly-setup ()
-		(setq-local completion-at-point-functions
-								`(,(cape-super-capf
-										#'sly-complete-symbol
-										#'cape-dabbrev))))
-	(add-hook 'sly-mode-hook #'my-sly-setup 100)
+	;; (defun my-sly-setup ()
+	;; 	(interactive)
+	;; 	)
+	;; (add-hook 'sly-mode-hook #'my-sly-setup 100)
 	)
