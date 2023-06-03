@@ -17,3 +17,18 @@
 	(purpose-compile-user-configuration)
 	)
 
+
+(defun my-load-window-layout ()
+		"enable purpose mode temporarily"
+		(interactive)
+		(purpose-mode +1)
+		(purpose-load-window-layout)
+		(purpose-mode -1)
+		)
+(defun my-save-window-layout ()
+		"enable purpose mode temporarily"
+		(interactive)
+		(purpose-mode +1)
+		(call-interactively
+		 'purpose-save-window-layout)
+		(purpose-mode -1))
