@@ -37,7 +37,7 @@
 	; TODO configure completion-at-point-functions??
 	(defun my-sly-setup ()
 		(interactive)
-		(setq-local completion-styles '(basic))
+		(setq-local completion-styles '(partial-completion))
 		)
 	(add-hook 'sly-mode-hook #'my-sly-setup 100)
 	)
