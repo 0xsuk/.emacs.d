@@ -35,8 +35,9 @@
 		"M-_" nil ;'sly-edit-uses
 		)
 	; TODO configure completion-at-point-functions??
-	;; (defun my-sly-setup ()
-	;; 	(interactive)
-	;; 	)
-	;; (add-hook 'sly-mode-hook #'my-sly-setup 100)
+	(defun my-sly-setup ()
+		(interactive)
+		(setq-local completion-styles '(basic))
+		)
+	(add-hook 'sly-mode-hook #'my-sly-setup 100)
 	)
