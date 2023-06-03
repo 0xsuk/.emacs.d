@@ -22,6 +22,13 @@
       (zone)))
 	)
 
+;; TODO
+;; (use-package bgex
+	;; :quelpa (bgex :fetcher github :repo "wachikun/emacs_bgex")
+	;; )
+
+
+
 (use-package fireplace
 	:config
 	(setq
@@ -34,6 +41,7 @@
 
 (defun enable-anime ()
 	(interactive)
+	(purpose-mode +1)
 	(popper-mode -1)
 	(scroll-bar-mode -1)
 	(hide-mode-line)
@@ -41,8 +49,8 @@
 
 (defun disable-anime ()
 	(interactive)
+	(purpose-mode -1)
 	(popper-mode 1)
-	(scroll-bar-mode 1)
 	(setq mode-line-format mode-line-format-backup)
 	)
 

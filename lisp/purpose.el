@@ -1,7 +1,7 @@
 ;; ; WINDOW MANAGEMENT
 (use-package window-purpose
 	:init
-	(purpose-mode 1)
+	;; (purpose-mode 1)
 	(add-to-list 'purpose-user-mode-purposes '(fireplace-mode . fireplace))
 	(add-to-list 'purpose-user-name-purposes '("*clock*" . clock))
 	(add-to-list 'purpose-user-mode-purposes '(shell-mode . terminal))

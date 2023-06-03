@@ -28,7 +28,7 @@
 ;; (my-load-file "evil.el")
 (my-load-file "popper.el")
 ;; (my-load-file "display-buffer.el")
-;;(my-load-file "purpose.el")
+(my-load-file "purpose.el")
 ;;(my-load-file "elfeed.el")
 		
 ;; (my-load-file "god.el")
