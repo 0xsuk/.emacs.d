@@ -18,6 +18,7 @@
 	(require 'eaf-image-viewer)
 	(require 'eaf-music-player)
 	(require 'eaf-video-player)
+	(require 'eaf-system-monitor)
 	;; (require 'eaf-2048) ; broken
 	)
 

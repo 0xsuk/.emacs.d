@@ -26,6 +26,7 @@
 					"^\\*sly-description*\\*$"
 					point-history-show-mode
 					;; Man-mode
+					"^EAF Music Player$"
 					))
 	(setq popper-window-height 0.40)
 	(popper-mode 1)
