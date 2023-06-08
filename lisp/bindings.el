@@ -100,7 +100,7 @@
 	"C-." 'consult-buffer
 	"C-x C-o" 'delete-other-windows ; delete-blank-lines
 	"C-x C-f" 'projectile-find-file ; find-file use C-;
-	"C-x C-;" nil ; bef: comment-line use M-; instead
+	"C-x C-;" 'eval-defun ; bef: comment-line use M-; instead
 	"C-x C-u" nil ; bef:upcase-region, use M-u
 	"C-x d" 'paredit-splice-sexp ; dired use dired-jump instead
 	"C-x i" nil ; insert-file (inserts content of file)
