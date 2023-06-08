@@ -29,6 +29,9 @@
 		(interactive)
 		(vterm-send-string
 		 (completing-read "Files: " (split-string (shell-command-to-string "compgen -f") "\n" t ))))
+	(general-def vterm-copy-mode-map
+		"C-c C-c" 'vterm-narrow-to-output
+		)
 	(general-def vterm-mode-map
 		"C-c C-h" (my-l (vterm-send-string "cd ..\n"))
 		"C-c C-j" (my-l (vterm-send-string "cd ~\n"))
@@ -90,6 +93,29 @@
 		(my-split-and-move-down)
     (evil-window-set-height 20)
     (multi-vterm-next)))
-(use-package multi-vterm
-  :config
-) ; always creates new even when one is avaiable
+(defun vterm--select-output ()
+	(let (start end)
+		(vterm-previous-prompt 1)
+		(next-line 1)
+		(beginning-of-line)
+		(setq start (point))
+		(set-mark start)
+		(vterm-next-prompt 1)
+		(previous-line 1)
+		(end-of-line)
+		(setq end (point))
+		`(,start ,end))
+	)
+(defun vterm-narrow-to-output ()
+	(interactive)
+	(let* ((mark (vterm--select-output))
+				 (start (car mark))
+				 (end (cadr mark)))
+		(narrow-to-region start end)
+		)
+	)
+
+
+;; (use-package multi-vterm
+  ;; :config
+;; ) ; always creates new even when one is avaiable

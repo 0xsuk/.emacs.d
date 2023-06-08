@@ -90,9 +90,3 @@
 	(interactive "sRepo name: ")
 	(async-shell-command (format "git clone git@github.com:0xsuk/%s.git" repo) ))
 
-(defun tmp ()
-	(interactive)
-	(vterm-previous-prompt 1)
-	(set-mark-command 1)
-	(vterm-next-prompt 1)
-	)
