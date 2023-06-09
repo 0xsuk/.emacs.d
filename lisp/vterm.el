@@ -53,7 +53,7 @@
 		"C-^" nil
 		"M-r" 'my-vterm-history
 		"M-c" 'my-vterm-command
-		"M-f" 'my-vterm-files ; use find-file insert
+		"M-o" 'my-vterm-files ; use find-file insert
 		"M-:" nil
 		"<f12>" nil
 		"<C-backspace>" (my-l (vterm-send-key (kbd "C-w")))
