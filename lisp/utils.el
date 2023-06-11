@@ -90,3 +90,7 @@
 	(interactive "sRepo name: ")
 	(async-shell-command (format "git clone git@github.com:0xsuk/%s.git" repo) ))
 
+(defun my-strand (sequence)
+	"Downcase SEQUENCE and substitute space to -.  save it to kill ring."
+	(interactive "sStrand: ")
+	(kill-new (downcase (cl-substitute ?\- ?\s sequence))))
