@@ -43,8 +43,17 @@
 	(setq image-cache-eviction-delay 15)
 	;
 
+	;; (setq pdf-view-continuous nil) ; t for continuous on mouse scroll
+	(general-def 'pdf-view-mode-map
+		"C-n" 'image-next-line ; also meow's j
+		"C-p" 'image-previous-line ; also meow's k
+		"n" 'pdf-view-scroll-up-or-next-page
+		"p" 'pdf-view-scroll-down-or-previous-page
+		"C-j" 'pdf-view-next-page
+		"C-k" 'pdf-view-previous-page)
+	
 	;midnight
-	(setq pdf-view-midnight-colors '("gainsboro" . "gray10"))
+	(setq pdf-view-midnight-colors '("#ffffff" . "#0f0b15")) ; get the background color using describe-face -> default -> background
 	(setq-local cursor-in-non-selected-windows nil)
 
 	;; 	"m" 'my-save-pdf-position

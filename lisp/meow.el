@@ -14,7 +14,6 @@
   (meow-motion-overwrite-define-key ; overriden key of major mode map will AUTOMATICALLY rebound to H-<key>
    '("j" . meow-next)
    '("k" . meow-prev)
-	 '("C-j" . my-scroll-down)
 	 '("J" . my-scroll-down)
 	 '("K" . my-scroll-up)
 	 '("|" . meow-normal-mode)
