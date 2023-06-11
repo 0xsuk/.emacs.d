@@ -70,7 +70,8 @@
    '("g" . meow-cancel-selection)
    '("G" . meow-grab)
    '("h" . meow-left)
-   '("H" . meow-left-expand)
+   ;; '("H" . meow-left-expand)
+   ;; TODO grab "text" like o;; '("H" . find-)
    '("i" . meow-insert)
    '("I" . meow-open-above)
    '("j" . meow-next)
@@ -80,6 +81,7 @@
    '("k" . meow-prev)
    ;; '("K" . meow-prev-expand) ; use C-p
    '("l" . meow-right)
+   ;; '("L" . meow-right-expand)
    '("L" . meow-right-expand)
    '("m" . meow-join)
    '("n" . meow-search)
