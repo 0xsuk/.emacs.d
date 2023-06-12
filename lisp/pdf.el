@@ -34,7 +34,7 @@
 		(centered-window-mode 1)
 		(scroll-bar-mode 1))
 	(setq org-noter-doc-split-fraction '(0.7 . 0.3))
-	(pdf-tools-install)
+	(pdf-tools-install) ; if this fails, do autoreconf in ../elpa/pdf-tools-20230404.327/build/server/. detail https://github.com/politza/pdf-tools/issues/142
 	;; (evil-set-initial-state 'pdf-view-mode 'emacs)
 
 	;https://www.reddit.com/r/emacs/comments/8uu7hb/question_pdftools_use_alot_of_ram/
