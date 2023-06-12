@@ -59,6 +59,7 @@
 ;; (my-load-file "hydra.el")
 ;; (my-load-file "mymode.el")
 ;; (my-load-file "tmp.el")
-(my-load-file "eaf.el")
+(unless islaptop
+	(my-load-file "eaf.el"))
 
 (message "INIT COMPLETE")
