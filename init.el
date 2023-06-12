@@ -50,7 +50,8 @@
 (my-load-file "corfu.el")
 (my-load-file "prescient.el")
 (my-load-file "meow.el")
-(my-load-file "pdf.el")
+(unless islaptop
+	(my-load-file "pdf.el"))
 ;(my-load-file "org.el")
 ;; (my-load-file "tabline.el")
 (my-load-file "vterm.el")
