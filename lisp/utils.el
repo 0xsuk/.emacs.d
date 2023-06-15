@@ -85,6 +85,20 @@
 	)
 ;https://qiita.com/zk_phi/items/c145b7bd8077b8a0f537
 
+(defun my-search-space ()
+	(interactive)
+	(isearch-forward nil t)
+	(isearch-yank-string " "))
+
+(defun my-search-leftparen ()
+	(interactive)
+	(isearch-forward nil t)
+	(isearch-yank-string "\("))
+
+(defun my-search-rightparen ()
+	(interactive)
+	(isearch-forward nil t)
+	(isearch-yank-string "\)"))
 
 (defun my-clone (repo)
 	(interactive "sRepo name: ")

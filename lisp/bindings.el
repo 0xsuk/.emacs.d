@@ -52,6 +52,9 @@
 				;; "y" (my-l (self-insert-command 1 ?Y))
 				;; "z" (my-l (self-insert-command 1 ?Z))
 				;; "/" (my-l (self-insert-command 1 ?/)))
+	"C-0" 'my-search-space
+	"C-8" 'my-search-leftparen
+	"C-9" 'my-search-rightparen
 	"C-j" 'default-indent-new-line
 	"C-k" 'crux-kill-and-join-forward
 	"C-x w" 'elfeed
