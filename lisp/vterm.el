@@ -57,21 +57,19 @@
 		"M-:" nil
 		"<f12>" nil
 		"<C-backspace>" (my-l (vterm-send-key (kbd "C-w")))
-		"j"
+		","
 		(general-key-dispatch 'vterm--self-insert
-			:timeout 0.35
-			"f" (my-l (vterm-send-string "`"))
+			;; :timeout 0.35
+			"," (my-l (vterm-send-string ","))
+			" " (my-l (vterm-send-string ", "))
 			"w" (my-l (vterm-send-string "'"))
-			"k" (my-l (vterm-send-string "()") (vterm-send-key (kbd "C-b")))
-			"s" (my-l (vterm-send-string "\"\"") (vterm-send-key (kbd "C-b")))
-			"p" (my-l (vterm-send-string "&")) ; pointer
-			"v" (my-l (vterm-send-string "*"))
-			"q" (my-l (vterm-send-string "<<")) ; false!
-			"d" (my-l (vterm-send-string "_"))
-			;; "l" 'my-vterm-send-string-curly-brackets-at-end
-			;; "j" 'my-vterm-send-string-dot
-			"r" (my-l (vterm-send-string "#"))
-			";" (my-l (vterm-send-string ";"))
+			"f" (my-l (vterm-send-string "()") (vterm-send-C-b))
+			"s" (my-l (vterm-send-string "\"\"") (vterm-send-C-b))
+			"a" (my-l (vterm-send-string "&")) ; pointer
+			;; "a" (my-l (vterm-send-string "*"))
+			;; "d" (my-l (vterm-send-string "_"))
+			;; "c" 'my-vterm-send-string-curly-brackets-at-end
+			;; "d" 'my-vterm-send-string-dot
 			)
 		)
 	(defun my-vterm-min ()
