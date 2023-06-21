@@ -34,6 +34,7 @@
 		"M-?" nil ;'sly-edit-uses
 		"M-_" nil ;'sly-edit-uses
 		)
+	(setq sly-mrepl-shortcut "")
 	; TODO configure completion-at-point-functions??
 	(defun my-sly-setup ()
 		(interactive)
