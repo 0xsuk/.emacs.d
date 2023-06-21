@@ -33,6 +33,9 @@
 		;; "M-:" 'sly-eval-last-expression
 		"M-?" nil ;'sly-edit-uses
 		"M-_" nil ;'sly-edit-uses
+		"C-c C-j" 'sly-eval-defun
+		"C-c C-p" 'sly-mrepl-previous-prompt
+		"C-c C-n" 'sly-mrepl-next-prompt
 		)
 	(setq sly-mrepl-shortcut "")
 	; TODO configure completion-at-point-functions??

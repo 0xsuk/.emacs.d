@@ -60,6 +60,7 @@
 	"C-x w" 'elfeed
 	"C-x C-t" (my-l (message (file-name-directory buffer-file-name))) ;before: transpose-line
 	"C-x j" 'purpose-switch-buffer ; bef:quit-window
+	"C-c C-j" 'eval-defun
 	"C-x C-r" 'eval-region ; bef:find-file-read-only
 	;; "C-x C-d" 'consult-dir ; bef:dired
 	;; "C-x d" 'dired ; list-directory
