@@ -9,12 +9,16 @@
 				;; (embark-insert strings))
 			;; )
 		;; "C-i" 'my-embark-insert
-		"C-j" 'vertico-next
-		"C-k" 'vertico-previous
-		"C-n" 'vertico-next-group
-		"C-p" 'vertico-previous-group
-		"C-u C-k" 'vertico-last
-		"C-u C-j" 'vertico-first
+		;; "C-j" 'vertico-next
+		;; "C-k" 'vertico-previous
+		"C-n" 'vertico-next
+		"C-p" 'vertico-previous
+		"C-S-n" 'vertico-next-group
+		"C-S-p" 'vertico-previous-group
+		;; "C-n" 'vertico-next-group
+		;; "C-p" 'vertico-previous-group
+		"C-u C-p" 'vertico-last
+		"C-u C-n" 'vertico-first
 		)
   (vertico-mode))
 

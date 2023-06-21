@@ -13,10 +13,8 @@
 	(general-def 'corfu-map
 		"C-SPC" 'corfu-insert-separator
 		"RET" nil
-		"C-j" 'corfu-next
-		"C-k" 'corfu-previous
-		"C-n" nil
-		"C-p" nil
+		"C-n" 'corfu-next
+		"C-p" 'corfu-previous
 		"M-h" nil
 		)
 	

@@ -56,7 +56,7 @@
 	"C-8" 'my-search-leftparen
 	"C-9" 'my-search-rightparen
 	"C-j" 'default-indent-new-line
-	"C-k" 'crux-kill-and-join-forward
+	;; "C-k" 'crux-kill-and-join-forward
 	"C-x w" 'elfeed
 	"C-x C-t" (my-l (message (file-name-directory buffer-file-name))) ;before: transpose-line
 	"C-x j" 'purpose-switch-buffer ; bef:quit-window

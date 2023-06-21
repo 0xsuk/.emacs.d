@@ -24,7 +24,7 @@
 	:custom
 	(sly-kill-without-query-p t)
 	; TODO: what's this. does this conflict with orderless/prescient?
-	(sly-complete-symbol-function 'sly-simple-completions)
+	(sly-complete-symbol-function 'sly-flex-completions)
 	:config
 	(general-def sly-mode-map
 		;; "C-x C-e" nil ; sly eavl last exp
