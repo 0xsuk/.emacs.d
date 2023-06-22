@@ -36,7 +36,7 @@
 ;; (set-frame-parameter (selected-frame) 'alpha '(90 . 90))
 (defun my-window-transparent ()
 	(interactive)
-	(set-frame-parameter (selected-frame) 'alpha '(85 . 85)))
+	(set-frame-parameter (selected-frame) 'alpha '(70 . 70)))
 (defun my-window-opaque ()
 	(interactive)
 	(set-frame-parameter (selected-frame) 'alpha '(100 . 100)))

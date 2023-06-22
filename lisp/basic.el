@@ -72,7 +72,8 @@
 	(set-face-attribute 'default nil :height 170)) ; sets font
 (winner-mode 1)
 (electric-pair-mode t) ; auto close parentheses
-(show-paren-mode 1) ; colorize matching parenthesis under cursor
+;; (show-paren-mode 1) ; colorize matching parenthesis under cursor
+;; (setq show-paren-delay 0.1)
 (global-display-line-numbers-mode 0)
 (add-to-list 'default-frame-alist '(alpha . (100 . 100)))
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)

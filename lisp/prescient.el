@@ -2,7 +2,7 @@
 (use-package prescient
 	:config
 	;; I use orderless ;; (setq prescient-filter-method '(literal initialism)) ; don need regex
-	(setq completion-category-overrides nil) ; then all falls back to completion-styles
+	;; (setq completion-category-overrides nil) ; then all falls back to completion-styles
 	)
 
 
