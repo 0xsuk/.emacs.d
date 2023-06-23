@@ -58,6 +58,7 @@
 (setq-default
  tab-width 2
  js-indent-level 2)
+(indent-tabs-mode -1) ; use space instead of tabs
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -68,8 +69,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 ;(setq debug-on-error nil) ; verbose error
 (if islaptop
-		(set-face-attribute 'default nil :height 140)
-	(set-face-attribute 'default nil :height 170)) ; sets font
+    (set-face-attribute 'default nil :height 140)
+  (set-face-attribute 'default nil :height 170))
 (winner-mode 1)
 (electric-pair-mode t) ; auto close parentheses
 ;; (show-paren-mode 1) ; colorize matching parenthesis under cursor
