@@ -3,8 +3,8 @@
 	:config
 	(centered-window-mode))
 
-;; (use-package rainbow-delimiters
-  ;; :hook (prog-mode . rainbow-delimiters-mode)) ; for any *prog*ramming language mode
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode)) ; for any *prog*ramming language mode
 
 ;; (use-package dimmer
 	;; :config
