@@ -51,6 +51,9 @@
 	(global-flycheck-mode)
 	(setq flycheck-display-errors-delay 0.5))
 
+(use-package char-stats
+	:quelpa (char-stats :fetcher github :repo "0xsuk/char-stats.el"))
+
 (use-package point-history
 	:quelpa (point-history :fetcher github :repo "blue0513/point-history")
 	:config
