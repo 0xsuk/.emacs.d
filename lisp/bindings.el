@@ -7,23 +7,23 @@
 	)
 
 (general-def 'global
-	";" (my-l (end-of-line) (self-insert-command 1 ?\;))
-	","
+	";"
 	(general-key-dispatch 'self-insert-command
-			;; :timeout 0.35
-			"," (my-l (insert ","))
-			" " (my-l (insert ", "))
-			"w" (my-l (insert "'"))
-			"f" (my-l (insert "()") (backward-char))
-			"s" (my-l (insert "\"\"") (backward-char))
-			"a" (my-l (insert "&")) ; pointer
-			;; "a" (my-l (insert "*"))
-			;; "d" (my-l (insert "_"))
-			"c" 'my-insert-curly-brackets-at-end
-			"d" 'my-insert-dot
-			"r" (my-l (insert "#"))
-			";" (my-l (insert ";"))
-			)
+		;; :timeout 0.35
+		"e" (my-l (end-of-line) (self-insert-command 1 ?\;))
+		" " (my-l (insert ";"))
+		"w" (my-l (insert "'"))
+		"f" (my-l (insert "()") (backward-char))
+		"s" (my-l (insert "\"\"") (backward-char))
+		"a" (my-l (insert "&")) ; pointer
+		"t" (my-l (insert "%"))
+		"u" 'my-insert-dot
+		"c" 'my-insert-curly-brackets-at-end
+		"d" 'my-insert-dot
+		"r" (my-l (insert "#"))
+		;; ";" (general-key-dispatch 'self-insert-command
+					;; "")
+		)
 	;; "/" (general-key-dispatch 'self-insert-command
 				;; "a" (my-l (self-insert-command 1 ?A))
 				;; "b" (my-l (self-insert-command 1 ?B))
