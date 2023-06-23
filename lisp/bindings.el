@@ -99,7 +99,7 @@
 	;; "C-x C-j"  ; use C-j
 	;; "C-." 'counsel-switch-buffer
 
-
+	;; "C-l" 
 	"C-," 'consult-dir ; TODO do this in consult-buffer
 	"C-." 'consult-buffer
 	"C-x C-o" 'delete-other-windows ; delete-blank-lines
@@ -118,7 +118,8 @@
 	;; "M-z" nil ;bef:zap-to-char, better use meow
 	"M-c" 'upcase-region ;bef:capitalize-word useless (because it affect only the first letter)
 	"M-t" nil ; bef:transpose-word
-	;;	"M-v" nil; scroll-down-command useless
+	"C-v" nil
+	"M-v" nil; scroll-down-command useless
 	"M-a" nil ; bef: backward-sentence
 	"M-p" 'backward-sexp
 	"M-n" 'forward-sexp ; undefined
