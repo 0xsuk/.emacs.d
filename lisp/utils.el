@@ -108,3 +108,13 @@
 	"Downcase SEQUENCE and substitute space to -.  save it to kill ring."
 	(interactive "sStrand: ")
 	(kill-new (downcase (cl-substitute ?\- ?\s sequence))))
+
+(defun my-rosalind-file (sequence)
+	"Create a new file by downcasing SEQUENCE and substituting space to -."
+	(interactive "sStrand: ")
+	(let ((minibuffer-setup-hook
+				 (lambda ()
+					 (insert (concat (downcase (cl-substitute ?\- ?\s sequence))
+													 ".lisp")))))
+		(call-interactively 'find-file))
+	)
