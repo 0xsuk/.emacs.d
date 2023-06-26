@@ -119,6 +119,7 @@
 	"M-c" 'upcase-region ;bef:capitalize-word useless (because it affect only the first letter)
 	"M-t" nil ; bef:transpose-word
 	"C-v" nil
+	"C-v C-k" 'comint-kill-input
 	"M-v" nil; scroll-down-command useless
 	"M-a" nil ; bef: backward-sentence
 	"M-p" 'backward-sexp
