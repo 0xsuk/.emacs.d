@@ -73,3 +73,23 @@
 
 (use-package avy
 	) ; you can use dC<char> to delete until <char>
+
+(defun read-file-line-by-line (filepath)
+  "Print each line of filepath's file content."
+  (with-temp-buffer
+    (insert-file-contents filepath)
+    (while (not (eobp))
+      (let ((line (buffer-substring-no-properties
+                   (line-beginning-position)
+                   (line-end-position))))
+        (forward-line 1)))))
+
+
+(use-package openai
+	:quelpa (openai :fetcher github :repo "emacs-openai/openai"))
+
+(use-package chatgpt
+	:after openai
+	:quelpa (chatgpt :fetcher github :repo "emacs-openai/chatgpt")
+	:config
+	)
