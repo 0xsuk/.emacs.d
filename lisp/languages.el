@@ -28,11 +28,11 @@
 	:config
 	(general-def sly-mode-map
 		;; "C-x C-e" nil ; sly eavl last exp
-		"M-," nil ;'sly-pop-find-definition-stack
-		"M-." nil ;'sly-edit-definition
+		;; "M-," nil ;'sly-pop-find-definition-stack
+		;; "M-." nil ;'sly-edit-definition
 		;; "M-:" 'sly-eval-last-expression
-		"M-?" nil ;'sly-edit-uses
-		"M-_" nil ;'sly-edit-uses
+		;; "M-?" nil ;'sly-edit-uses
+		;; "M-_" nil ;'sly-edit-uses
 		"C-c C-j" 'sly-eval-defun
 		"C-c C-p" 'sly-mrepl-previous-prompt
 		"C-c C-n" 'sly-mrepl-next-prompt
@@ -44,4 +44,8 @@
 		(setq-local completion-styles '(basic partial-completion)) ; without basic, "slot-" does not match slot-value for example
 		)
 	(add-hook 'sly-mode-hook #'my-sly-setup 100)
+	)
+
+(general-def c-mode-base-map
+	";" nil
 	)

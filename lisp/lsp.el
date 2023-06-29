@@ -67,6 +67,3 @@
 				lsp-ui-sideline-enable nil ; stupid
 				; lsp-ui-sideline-diagnostic-max-lines 100
 				))
-
-(general-def c-mode-base-map
-	";" nil)
