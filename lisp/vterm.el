@@ -57,19 +57,22 @@
 		"M-:" nil
 		"<f12>" nil
 		"<C-backspace>" (my-l (vterm-send-key (kbd "C-w")))
-		","
+		";"
 		(general-key-dispatch 'vterm--self-insert
 			;; :timeout 0.35
-			"," (my-l (vterm-send-string ","))
-			" " (my-l (vterm-send-string ", "))
+			"e" (my-l (end-of-line) (vterm-send-C-e) (vterm-send-string ";"))
+			" " (my-l (vterm-send-string ";"))
 			"w" (my-l (vterm-send-string "'"))
-			"f" (my-l (vterm-send-string "()") (vterm-send-C-b))
-			"s" (my-l (vterm-send-string "\"\"") (vterm-send-C-b))
+			"f" (my-l (vterm-send-string "()") (backward-char))
+			"s" (my-l (vterm-send-string "\"\"") (backward-char))
 			"a" (my-l (vterm-send-string "&")) ; pointer
-			;; "a" (my-l (vterm-send-string "*"))
-			;; "d" (my-l (vterm-send-string "_"))
+			"t" (my-l (vterm-send-string "%"))
+			;; "u" 'my-vterm-send-string-dot
 			;; "c" 'my-vterm-send-string-curly-brackets-at-end
 			;; "d" 'my-vterm-send-string-dot
+			"r" (my-l (vterm-send-string "#"))
+			;; ";" (general-key-dispatch 'self-vterm--send-string-command
+			;; "")
 			)
 		)
 	(defun my-vterm-min ()
