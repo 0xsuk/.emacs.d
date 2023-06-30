@@ -1,3 +1,9 @@
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp-deferred))))  ; or lsp-deferred
+
 (use-package typescript-mode
   :mode ("\\.ts\\'" "\\.tsx\\'") ;active typescript-mode for .ts
   :init
