@@ -63,8 +63,8 @@
 			"e" (my-l (end-of-line) (vterm-send-C-e) (vterm-send-string ";"))
 			" " (my-l (vterm-send-string ";"))
 			"w" (my-l (vterm-send-string "'"))
-			"f" (my-l (vterm-send-string "()") (backward-char))
-			"s" (my-l (vterm-send-string "\"\"") (backward-char))
+			"f" (my-l (vterm-send-string "()") (vterm-send-C-b))
+			"s" (my-l (vterm-send-string "\"\"") (vterm-send-C-b))
 			"a" (my-l (vterm-send-string "&")) ; pointer
 			"t" (my-l (vterm-send-string "%"))
 			;; "u" 'my-vterm-send-string-dot
