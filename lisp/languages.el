@@ -2,7 +2,10 @@
   :ensure t
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
-                          (lsp-deferred))))  ; or lsp-deferred
+                          (lsp-deferred)))  ; or lsp-deferred
+	:config
+	(setq lsp-pyright-venv-path (concat (getenv "HOME") "/venv/ai"))
+	)
 
 (use-package typescript-mode
   :mode ("\\.ts\\'" "\\.tsx\\'") ;active typescript-mode for .ts
