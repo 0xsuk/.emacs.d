@@ -1,3 +1,5 @@
+(use-package ein)
+
 (use-package lsp-pyright
   :ensure t
   :hook (python-mode . (lambda ()
