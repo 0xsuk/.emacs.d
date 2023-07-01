@@ -1,5 +1,9 @@
 (defmacro my-l (&rest body)
 	`(lambda () (interactive) ,@body))
+(defmacro with-f12-q (&rest body)
+	`(general-def 'global
+		 "<f12> q" (my-l ,@body))
+	)
 (defun my-scroll-down ()
 	(interactive)
 	(scroll-up-command 7))
