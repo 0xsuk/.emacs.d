@@ -1,4 +1,26 @@
-(use-package ein)
+(use-package ein
+	:config
+	
+	;; (defun ein-tune-fundamental ()
+	;; 	(print "ein-tune-fundamental"))
+	;; (defun ein-tune-python ()
+	;; 	(print "ein-tune-python"))
+	;; (defun setup-ein ()
+	;; 	;; (message-box "running")
+	;; 	(print (concat (symbol-name major-mode) " setup-ein"))
+	;; 	;; (if ein:notebook-mode
+	;; 	(when (eq major-mode 'fundamental-mode)
+	;; 		(print "fundamental mode setup-ein")
+	;; 		(add-hook 'post-command-hook 'ein-tune-fundamental nil t)
+	;; 		)
+	;; 	(when (eq major-mode 'python-mode)
+	;; 		(print "python mode setup-ein")
+	;; 		(add-hook 'post-command-hook 'ein-tune-python nil t))
+	;; 		;; (remove-hook 'post-command-hook 'tune-state t)
+	;; 	)
+	;; (add-hook 'ein:notebook-mode-hook 'setup-ein) ; called twice for two major-modes (fundamental and python)
+	;; (remove-hook 'ein:notebook-mode-hook 'setup-ein)
+	)
 
 (use-package lsp-pyright
   :ensure t
