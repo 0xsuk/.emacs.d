@@ -1,6 +1,9 @@
 (use-package ein
 	:config
 	
+	(setq ein:output-area-inlined-images nil)
+	(add-hook 'ein:notebook-mode-hook ;called twice (fundamental and python)
+						'undo-tree-mode)
 	;; (defun ein-tune-fundamental ()
 	;; 	(print "ein-tune-fundamental"))
 	;; (defun ein-tune-python ()
