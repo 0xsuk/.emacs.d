@@ -11,12 +11,15 @@
 	(general-key-dispatch 'self-insert-command
 		;; :timeout 0.35
 		"e" (my-l (end-of-line) (self-insert-command 1 ?\;))
-		" " (my-l (insert ";"))
-		"w" (my-l (insert "'"))
+		";" (my-l (insert ";"))
+		"w" (my-l (if (eq major-mode 'python-mode)
+									(progn (insert "''") (backward-char))
+								(insert "'")))
 		"f" (my-l (insert "()") (backward-char))
 		"s" (my-l (insert "\"\"") (backward-char))
 		"a" (my-l (insert "&")) ; pointer
 		"t" (my-l (insert "%"))
+		"j" (my-l (insert "_"))
 		"u" 'my-insert-dot
 		"c" 'my-insert-curly-brackets-at-end
 		"d" 'my-insert-dot
