@@ -32,7 +32,9 @@
  initial-scratch-message nil
  warning-minimum-level :emergency
  inhibit-startup-message t
- gc-cons-threshold 100000000 ; lsp performance https://emacs-lsp.github.io/lsp-mode/page/performance/
+ ;; Maintainer: My suggestion is to repeatedly multiply gc-cons-threshold by 2 until you stop seeing significant improvements in responsiveness, and in any case not to increase by a factor larger than 100 or somesuch. If even a 100-fold increase doesn't help, there's some deeper problem with the Lisp code which produces so much garbage, or maybe GC is not the reason for slowdown.
+ gc-cons-threshold (* 2 800000)
+ ;; gc-cons-threshold 100000000 ; lsp performance https://emacs-lsp.github.io/lsp-mode/page/performance/
  read-process-output-max (* 1024 1024) ; same
  scroll-conservatively 1
  scroll-step 1
