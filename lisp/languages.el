@@ -32,6 +32,7 @@
                           (lsp-deferred)))  ; or lsp-deferred
 	:config
 	(setq lsp-pyright-venv-path (concat (getenv "HOME") "/venv/ai"))
+	(setq python-indent 2)
 	)
 
 (use-package typescript-mode
