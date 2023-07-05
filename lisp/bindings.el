@@ -15,6 +15,7 @@
 		"w" (my-l (if (eq major-mode 'python-mode)
 									(progn (insert "''") (backward-char))
 								(insert "'")))
+		"g" (my-l (insert " = "))
 		"f" (my-l (insert "()") (backward-char))
 		"s" (my-l (insert "\"\"") (backward-char))
 		"a" (my-l (insert "&")) ; pointer
