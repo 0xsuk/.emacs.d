@@ -1,6 +1,8 @@
 (use-package ein
 	:config
 	
+	;(projectname)$ pip install ipykernel
+	;(projectname)$ ipython kernel install --user --name=projectname
 	(setq ein:output-area-inlined-images nil)
 	(add-hook 'ein:notebook-mode-hook ;called twice (fundamental and python)
 						'undo-tree-mode)
